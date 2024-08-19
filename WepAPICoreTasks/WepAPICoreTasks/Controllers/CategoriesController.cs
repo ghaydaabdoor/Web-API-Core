@@ -1,0 +1,31 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using WepAPICoreTasks.Models;
+
+namespace WepAPICoreTasks.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CategoriesController : ControllerBase
+    {
+        private readonly MyDbContext _db;
+        public CategoriesController(MyDbContext db)
+        {
+            _db = db;
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var categories = _db.Categories.ToList();
+            return Ok(categories);
+        }
+
+        [HttpGet("id")]
+        public IActionResult GetById(int id)
+        {
+            var categoryById=_db.Categories.Find(id);
+            return Ok(categoryById);
+        }
+    }
+}
