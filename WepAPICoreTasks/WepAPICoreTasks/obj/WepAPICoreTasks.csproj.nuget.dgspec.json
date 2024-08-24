@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Orange\\Desktop\\web API\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj": {}
+    "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Orange\\Desktop\\web API\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj": {
+    "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Orange\\Desktop\\web API\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj",
+        "projectUniqueName": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj",
         "projectName": "WepAPICoreTasks",
-        "projectPath": "C:\\Users\\Orange\\Desktop\\web API\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj",
+        "projectPath": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WepAPICoreTasks\\WepAPICoreTasks\\WepAPICoreTasks.csproj",
         "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Orange\\Desktop\\web API\\WepAPICoreTasks\\WepAPICoreTasks\\obj\\",
+        "outputPath": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WepAPICoreTasks\\WepAPICoreTasks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

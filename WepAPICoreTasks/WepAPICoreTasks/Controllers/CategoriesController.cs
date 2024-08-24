@@ -4,7 +4,7 @@ using WepAPICoreTasks.Models;
 
 namespace WepAPICoreTasks.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {
@@ -14,14 +14,15 @@ namespace WepAPICoreTasks.Controllers
             _db = db;
         }
 
-        [HttpGet]
+        [HttpGet ("Cat/All")]
         public IActionResult Get()
         {
             var categories = _db.Categories.ToList();
             return Ok(categories);
         }
 
-        [HttpGet("id")]
+        [Route("Cat/All/{id}")]
+        [HttpGet]
         public IActionResult GetById(int id)
         {
             var categoryById=_db.Categories.Find(id);
