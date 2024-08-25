@@ -65,6 +65,44 @@ namespace WebAPICoreTask2.Controllers
         }
 
 
+
+
+        [HttpGet("Products/CategoryId")]
+        public IActionResult GetProductByCategoryId(int id)
+        {
+            var product = _db.Products.Where(p => p.Category.CategoryId == id).Select(p => new
+            {
+                p.ProductId,
+                p.ProductName,
+                p.Description,
+                p.Price,
+                p.ProductImage,
+                Category = new
+                {
+                    p.Category.CategoryId,
+                    p.Category.CategoryName,
+                    p.Category.CategoryImage,
+                }
+            }).ToList();
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(product);
+            }
+        }
+
+
+
+
+
+
+
+
+
         [HttpGet("Product/name")]
         public IActionResult GetProductByName(int id, string name)
         {

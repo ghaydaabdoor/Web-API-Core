@@ -60,7 +60,7 @@ namespace WebAPICoreTask2.Controllers
         [HttpGet("Order/name/{name}")]
         public IActionResult GetOrdersByName(string name)
         {
-            var order = _db.Orders.Include(a=>a.User).Where(a => a.User.Username == name).Select(h => new
+            var order = _db.Orders.Where(a => a.User.Username == name).Select(h => new
             {
                 h.OrderId,
                 h.OrderDate,
