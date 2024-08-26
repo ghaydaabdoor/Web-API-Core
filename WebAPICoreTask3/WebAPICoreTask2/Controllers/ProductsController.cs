@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using WebAPICoreTask2.DTO_folder;
 using WebAPICoreTask2.Models;
 
 namespace WebAPICoreTask2.Controllers
@@ -14,10 +15,13 @@ namespace WebAPICoreTask2.Controllers
             _db = db;
         }
 
+
+
+
         [HttpGet ("Products/All")]
         public IActionResult GetAllProducts()
         {
-            var products = _db.Products
+            var products = _db.Products.OrderByDescending(p => p.Price)
                                  .Select(p => new
                                  {
                                      p.ProductId,
@@ -36,6 +40,9 @@ namespace WebAPICoreTask2.Controllers
             return Ok(products);
         }
 
+
+
+
         [HttpGet ("Products/id")]
         public IActionResult GetProductById(int id)
         {
@@ -52,7 +59,7 @@ namespace WebAPICoreTask2.Controllers
                     p.Category.CategoryName,
                     p.Category.CategoryImage,
                 }
-            }).FirstOrDefault();
+            }).ToList();
 
             if (product == null)
             {
@@ -143,5 +150,76 @@ namespace WebAPICoreTask2.Controllers
             _db.Products.Remove(product);
             _db.SaveChanges();
         }
+
+
+
+        [Route("Product/post")]
+        [HttpPost]
+        public IActionResult CreateProductToCategpry([FromForm] productRequestDTO productt)
+        {
+            var data = new Product
+            {
+                ProductName = productt.ProductName,
+                Description= productt.Description,
+                Price = productt.Price,
+                CategoryId = productt.CategoryId,
+                ProductImage = productt.ProductImage.FileName,
+            };
+
+            var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads"); 
+            if (!Directory.Exists(uploadsFolderPath)) 
+            {
+                Directory.CreateDirectory(uploadsFolderPath);
+            }
+            var filePath = Path.Combine(uploadsFolderPath, productt.ProductImage.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create)) // عشان تظهر الصورة جوا ال vs واقدر افتحها
+            {
+                productt.ProductImage.CopyToAsync(stream);
+            }
+
+            _db.Products.Add(data);
+            _db.SaveChanges();
+
+            return Ok();
+        }
+
+
+
+        [HttpPut("Products/Put/{id}")]
+        public IActionResult EditProduct(int id, [FromForm] productRequestDTO product)
+        {
+            var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+            if (!Directory.Exists(uploadsFolderPath))
+            {
+                Directory.CreateDirectory(uploadsFolderPath);
+            }
+            var filePath = Path.Combine(uploadsFolderPath, product.ProductImage.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                product.ProductImage.CopyToAsync(stream);
+            }
+
+            var pro = _db.Products.Find(id);
+            if (pro == null)
+            {
+                return NotFound();
+            };
+
+            pro.ProductName = product.ProductName;
+            pro.Description = product.Description;
+            pro.Price = product.Price;
+            pro.CategoryId = product.CategoryId;
+            pro.ProductImage = product.ProductImage.FileName;
+
+            _db.Products.Update(pro);
+            _db.SaveChanges();
+            return Ok();
+        }
+
+
+
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebAPICoreTask2.DTO_folder;
 using WebAPICoreTask2.Models;
 
 namespace WebAPICoreTask2.Controllers
@@ -67,5 +68,38 @@ namespace WebAPICoreTask2.Controllers
                 return Ok();
             }
         }
+
+        [Route("Users/Post")]
+        [HttpPost]
+        public IActionResult AddUser([FromForm] userRequestDTO newUser)
+        {
+            var data = new User
+            {
+                Username = newUser.Username,
+                Email = newUser.Email,
+                Password = newUser.Password,
+            };
+
+            _db.Users.Add(data);
+            _db.SaveChanges();
+            return Ok();
+        }
+
+        [Route("Users/Put/{id}")]
+        [HttpPut]
+        public IActionResult EditUser(int id, [FromForm] userRequestDTO modifyUser)
+        {
+            var user=_db.Users.FirstOrDefault(t => t.UserId == id);
+            user.Username = modifyUser.Username;
+            user.Email = modifyUser.Email;
+            user.Password = modifyUser.Password;
+
+            _db.Users.Update(user);
+            _db.SaveChanges();
+
+            return Ok();
+        }
+
+
     }
 }
