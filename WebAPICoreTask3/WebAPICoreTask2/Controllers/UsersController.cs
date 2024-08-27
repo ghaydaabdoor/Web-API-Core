@@ -100,6 +100,30 @@ namespace WebAPICoreTask2.Controllers
             return Ok();
         }
 
+        [Route("calc")]
+        [HttpGet]
+        public IActionResult calc(string x)
+        {
+            var calcToInt = x.Split(' ');
+            var num1 = Convert.ToDouble(calcToInt[0]);
+            var num2= Convert.ToDouble(calcToInt[2]);
+            var operation = calcToInt[1];
+            double result = 0;
+            switch (operation)
+            {
+                case "+":
+                    result=num1+num2;
+                    break;
+                case "-":
+                    result=num1-num2;
+                    break;
+                default:
+                    return BadRequest("Invalid operation");
+            }
+            return Ok(result);
+
+        }
+
 
     }
 }

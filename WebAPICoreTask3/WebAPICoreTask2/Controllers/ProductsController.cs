@@ -21,7 +21,8 @@ namespace WebAPICoreTask2.Controllers
         [HttpGet ("Products/All")]
         public IActionResult GetAllProducts()
         {
-            var products = _db.Products.OrderByDescending(p => p.Price)
+            //var products = _db.Products.OrderByDescending(p => p.Price)
+            var products = _db.Products
                                  .Select(p => new
                                  {
                                      p.ProductId,
@@ -59,7 +60,7 @@ namespace WebAPICoreTask2.Controllers
                     p.Category.CategoryName,
                     p.Category.CategoryImage,
                 }
-            }).ToList();
+            }).FirstOrDefault();
 
             if (product == null)
             {
@@ -157,14 +158,7 @@ namespace WebAPICoreTask2.Controllers
         [HttpPost]
         public IActionResult CreateProductToCategpry([FromForm] productRequestDTO productt)
         {
-            var data = new Product
-            {
-                ProductName = productt.ProductName,
-                Description= productt.Description,
-                Price = productt.Price,
-                CategoryId = productt.CategoryId,
-                ProductImage = productt.ProductImage.FileName,
-            };
+            
 
             var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads"); 
             if (!Directory.Exists(uploadsFolderPath)) 
@@ -173,15 +167,25 @@ namespace WebAPICoreTask2.Controllers
             }
             var filePath = Path.Combine(uploadsFolderPath, productt.ProductImage.FileName);
 
-            using (var stream = new FileStream(filePath, FileMode.Create)) // عشان تظهر الصورة جوا ال vs واقدر افتحها
+            using (var stream = new FileStream(filePath, FileMode.Create)) 
             {
                 productt.ProductImage.CopyToAsync(stream);
             }
+            // Return the full URL to the image
+            var imageUrl = $"{Request.Scheme}://{Request.Host}/Uploads/{productt.ProductImage.FileName}";
+            var data = new Product
+            {
+                ProductName = productt.ProductName,
+                Description = productt.Description,
+                Price = productt.Price,
+                CategoryId = productt.CategoryId,
+                ProductImage = imageUrl, // ضفت هون رابط الصورة الجديد و الي فيه رابط السيرفر كمان
+            };
 
-            _db.Products.Add(data);
+            _db.Products.Add(data); // it gonna be stored in the database from here 
             _db.SaveChanges();
 
-            return Ok();
+            return Ok(imageUrl);
         }
 
 
