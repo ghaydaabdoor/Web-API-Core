@@ -125,5 +125,37 @@ namespace WebAPICoreTask2.Controllers
         }
 
 
+
+        [Route("Problem2/{num1}/{num2}")]
+        [HttpGet]
+        public IActionResult problem2(int num1, int num2)
+        {
+            if(num1==30 || num2==30 || num1+num2==30)
+            {
+                return Ok("true");
+            }
+            else
+            {
+                return Ok("false");
+            }
+        }
+
+
+        [Route("Problem3")]
+        [HttpGet]
+        public IActionResult problem3(int numb)
+        {
+            if(numb>0 && (numb%3==0 || numb%7==0))
+            {
+                return Ok("true");
+            }
+            else
+            {
+                return Ok("false");
+            }
+        }
+
+
+
     }
 }

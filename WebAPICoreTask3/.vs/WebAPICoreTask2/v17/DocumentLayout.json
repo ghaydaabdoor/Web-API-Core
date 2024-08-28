@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\dto folder\\productrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\dto folder\\productrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\controllers\\cartitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\dto folder\\addcartitemrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\dto folder\\addcartitemrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\dto folder\\userrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\dto folder\\userrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|c:\\users\\orange\\desktop\\web api\\web-api-core\\webapicoretask3\\webapicoretask2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{909F21A5-360F-4B5E-8001-80E128CCBCBA}|WebAPICoreTask2\\WebAPICoreTask2.csproj|solutionrelative:webapicoretask2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,58 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Product.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T17:50:36.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Category.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T17:50:09.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Program.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Program.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAWwBoAAAAEAAAA",
+              "Title": "AddCartItemRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\AddCartItemRequestDTO.cs",
+              "RelativeDocumentMoniker": "WebAPICoreTask2\\DTO folder\\AddCartItemRequestDTO.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\AddCartItemRequestDTO.cs",
+              "RelativeToolTip": "WebAPICoreTask2\\DTO folder\\AddCartItemRequestDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T10:09:42.591Z",
+              "WhenOpened": "2024-08-28T09:48:04.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "productRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\productRequestDTO.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\DTO folder\\productRequestDTO.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\productRequestDTO.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\DTO folder\\productRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
+              "Title": "CartItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\CartItemsController.cs",
+              "RelativeDocumentMoniker": "WebAPICoreTask2\\Controllers\\CartItemsController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\CartItemsController.cs",
+              "RelativeToolTip": "WebAPICoreTask2\\Controllers\\CartItemsController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAMwCsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T09:06:45.383Z",
+              "WhenOpened": "2024-08-28T08:43:08.344Z",
               "EditorCaption": ""
             },
             {
@@ -108,58 +62,22 @@
               "RelativeDocumentMoniker": "WebAPICoreTask2\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "WebAPICoreTask2\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAmwBgAAAAMAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBQAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T08:39:12.66Z",
+              "WhenOpened": "2024-08-28T06:09:01.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\User.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\User.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "WebAPICoreTask2\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Models\\Product.cs",
+              "RelativeToolTip": "WebAPICoreTask2\\Models\\Product.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T15:58:45.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "userRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\userRequestDTO.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\DTO folder\\userRequestDTO.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\DTO folder\\userRequestDTO.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\DTO folder\\userRequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T15:54:25.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAkwHAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T15:52:22.114Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "WebAPICoreTask2\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\web API\\Web-API-Core\\WebAPICoreTask3\\WebAPICoreTask2\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "WebAPICoreTask2\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAMwDsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T07:44:25.467Z",
+              "WhenOpened": "2024-08-27T17:50:36.131Z",
               "EditorCaption": ""
             }
           ]
