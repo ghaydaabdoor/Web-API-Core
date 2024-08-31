@@ -36,6 +36,8 @@
                 <th scope="col">Cart ID</th>
                 <th scope="col">Product Name</th>
                 <th scope="col">Quantity</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody id="tbody">
@@ -51,21 +53,53 @@
     <script>
         async function getCartItems() {
             let tbody = document.getElementById("tbody");
-            const url = "http://localhost:24540/api/CartItems";
+            const url = "http://localhost:24540/CartItems/Get";
             var response = await fetch(url);
             var data = await response.json();
             console.log(data);
             data.forEach(element => {
                 tbody.innerHTML +=
-                        `<tr>
+                    `<tr>
                           <td>${element.cartId}</td>
                           <td>${element.product.productName}</td>
-                          <td>${element.quantity}</td>
-                        </tr>`
+                          <td><input type="number" value=${element.quantity} id="quantity-${element.product.productId}"></td>
+                          <td><button onclick=editProduct(${element.product.productId})>Edit</button></td>
+                          <td><button onclick=deleteProduct(${element.product.productId})>Delete</button></td>
+                        </tr>`;
             });
 
         }
         getCartItems();
+
+        async function editProduct(x) {
+            let quantity = document.getElementById(`quantity-${x}`);
+            const editAPI = `http://localhost:24540/CartItems/Edit/${x}`;
+            var data = {
+                "quantity": quantity.value,
+            }
+            var response = await fetch(editAPI,
+                {
+                    method: "PUT",
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+            alert('Item updated successfully!');
+        }
+
+
+        async function deleteProduct(y) {
+            const deleteAPO= `http://localhost:24540/CartItems/Delete/${y}`;
+            var response= await fetch(deleteAPO,
+            {
+                    method: "DELETE",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+            alert('Item deleted successfully!');
+        }
 
     </script>
 </body>

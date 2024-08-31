@@ -5,7 +5,6 @@ using WebAPICoreTask2.Models;
 
 namespace WebAPICoreTask2.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class CartItemsController : ControllerBase
     {
@@ -16,6 +15,7 @@ namespace WebAPICoreTask2.Controllers
             _db= db;
         }
 
+        [Route("CartItems/Get")]
         [HttpGet]
         public IActionResult GetCartItems()
         {
@@ -34,7 +34,7 @@ namespace WebAPICoreTask2.Controllers
             return Ok(cartItems);
         }
 
-
+        [Route("CartItems/Post")]
         [HttpPost]
         public IActionResult AddtoCart([FromBody] AddCartItemRequestDTO add)
         {
@@ -49,5 +49,29 @@ namespace WebAPICoreTask2.Controllers
             _db.SaveChanges();
             return Ok(data);
         }
+
+        [Route("CartItems/Edit/{id}")]
+        [HttpPut()]
+        public IActionResult editCartItem(int id, [FromBody] CartItemRequestDTO cartitem)
+        {
+            var specificItem = _db.CartItems.FirstOrDefault(p=>p.Product.ProductId==id);
+
+            specificItem.Quantity=cartitem.Quantity;
+
+            _db.CartItems.Update(specificItem);
+            _db.SaveChanges();
+            return Ok(specificItem);
+        }
+
+        [Route("CartItems/Delete/{id}")]
+        [HttpDelete()]
+        public IActionResult deleteCartItem(int id)
+        {
+            var specificItem = _db.CartItems.FirstOrDefault(p => p.Product.ProductId == id);
+            _db.CartItems.Remove(specificItem);
+            _db.SaveChanges();
+            return Ok(specificItem);
+        }
+
     }
 }

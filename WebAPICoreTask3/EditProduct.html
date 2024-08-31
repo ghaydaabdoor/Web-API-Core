@@ -62,23 +62,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-
-        // const url = 'http://localhost:24540/Product/post';
-        // var form = document.getElementById('form');
-        // async function editProduct() {
-        //   var formSwager = new FormData(form);
-        //   event.preventDefault();
-        //   let response = await fetch(url, {
-        //     method: 'POST',
-        //     body: formSwager
-        //   })
-
-        //   let data = response;
-        //   alert('product added succefully');
-        // }
-
-
-        /////////////
         var x = localStorage.getItem("productId")
         const url =`http://localhost:24540/Products/Put/${x}`;
 
@@ -91,9 +74,7 @@
                 method: "PUT",
                 body: formData
             })
-
             alert("Product updated Successfully");
-
         }
 
 
