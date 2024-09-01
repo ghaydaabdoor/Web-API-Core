@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAPICoreTask2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14fed4056876ae01b0e874572f23712bf25e11d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+367e9ac81cbeff7add9dea7b73f49d6380706491")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAPICoreTask2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAPICoreTask2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

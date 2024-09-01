@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using WebAPICoreTask2.DTO_folder;
 using WebAPICoreTask2.Models;
@@ -71,6 +72,20 @@ namespace WebAPICoreTask2.Controllers
                 return Ok(product);
             }
         }
+
+
+
+
+        // problem solving : get the last 5 products when ordering descending by name
+        [HttpGet("Products/nameOrdered")]
+        public IActionResult GetProductNameOrdered()
+        {
+            var product = _db.Products.OrderByDescending(p=>p.ProductName).Take(5).ToList();
+            return Ok(product);
+        }
+
+
+
 
 
 
