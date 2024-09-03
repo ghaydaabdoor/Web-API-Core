@@ -171,6 +171,7 @@ namespace WebAPICoreTask2.Controllers
                 PasswordHash = passwordHash, // from line 166
                 PasswordSalt = salt, // from line 166
                 Username = userDTO.Username,
+                Email = userDTO.Email,
             };
 
 
@@ -183,14 +184,29 @@ namespace WebAPICoreTask2.Controllers
         [HttpPost("login")] // why post not get? more secure to send data in the body of the form not in url
         public IActionResult Login([FromForm] userRequestDTO model)
         {
-            var user = _db.Users.FirstOrDefault(x => x.Username == model.Username); // better to get record by email not UserName since it's unique!
+            var user = _db.Users.FirstOrDefault(x => x.Email == model.Email); // better to get record by email not UserName since it's unique!
             if (user == null || !PasswordHasher.VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
             {
-                return Unauthorized("Invalid username or password."); // 401 Unauthorized 
+                return Unauthorized("Invalid email or password."); // 401 Unauthorized 
             }
             return Ok("User logged in successfully");
         }
 
+
+        [Route("Users/id/{id}")]
+        [HttpGet]
+        public IActionResult GetUsersById(int id)
+        {
+            var user = _db.Users.FirstOrDefault(a => a.UserId == id);
+            if (user == null)
+            {
+                return NotFound("User does not exist");
+            }
+            else
+            {
+                return Ok(user);
+            }
+        }
 
     }
 }
