@@ -84,6 +84,7 @@
         const urlAPI = "http://localhost:24540/login";
         var form = document.getElementById("form");
         async function Login() {
+            debugger
             var formdata = new FormData(form);
             event.preventDefault();
             const data = await fetch(urlAPI,
@@ -92,13 +93,18 @@
                     body: formdata,
                 }
             );
+            let result = await data.json();
             if (data.ok) {
-                window.alert('User logged in succefully')
+                localStorage.setItem('jwtToken', result.token);
+                window.alert('User logged in succefully');
+                window.location="Products.html";
             }
             else {
                 window.alert('Wrong email or password');
             }
         }
+
+
 
         async function getUserInfo() {
             var userID = document.getElementById("userID").value;

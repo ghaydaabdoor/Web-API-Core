@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -44,7 +45,7 @@ namespace WebAPICoreTask2.Controllers
 
 
 
-
+        [Authorize]
         [HttpGet ("Products/id")]
         public IActionResult GetProductById(int id)
         {

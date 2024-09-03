@@ -36,6 +36,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Cart.html">Cart</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html">Login</a>
+                </li>
         </div>
     </nav>
 
@@ -50,20 +56,32 @@
         crossorigin="anonymous"></script>
 
     <script>
+        var Token = localStorage.jwtToken;
+        if (Token == null) {
+            alert("Please log in first.");
+            window.location.href = "Login.html"; 
+        }
 
         var CatID = Number(localStorage.getItem("categoryId"));
         async function getData() {
             var APIurl;
             if (CatID == 0 || CatID == null) {
                 APIurl = "http://localhost:24540/Products/All";
-            }
-            else {
+            } else {
                 APIurl = `http://localhost:24540/Products/CategoryId?id=${CatID}`;
             }
-            var response = await fetch(APIurl);
+            var response = await fetch(APIurl, {
+                headers: {
+                    'Authorization': `Bearer ${Token}`
+                }
+            });
+
+            if (!response.ok) {
+                alert("process failed");
+                return 0;
+            }
             var data = await response.json();
             console.log(data);
-
 
             var container = document.getElementById("container");
             data.forEach(element => {
@@ -77,20 +95,21 @@
                 </div>`;
             })
         };
+
         function store(id) {
             localStorage.productId = id;
-            window.location = "ProductDetails.html"
+            window.location = "ProductDetails.html";
         }
+
         function storePr(id) {
             localStorage.productId = id;
-            window.location = "EditProduct.html"
+            window.location = "EditProduct.html";
         }
+
         getData();
 
-
-        function clearStorage(){
-            localStorage.removeItem("categoryId")
-
+        function clearStorage() {
+            localStorage.removeItem("categoryId");
         }
     </script>
 </body>

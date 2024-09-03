@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 using WebAPICoreTask2.DTO_folder;
 using WebAPICoreTask2.Models;
 
@@ -10,9 +12,11 @@ namespace WebAPICoreTask2.Controllers
     public class UsersController : ControllerBase
     {
         private readonly MyDbContext _db;
-        public UsersController(MyDbContext db)
+        private readonly TokenGenerator _tokenGenerator;
+        public UsersController(MyDbContext db, TokenGenerator tokenGenerator)
         {
             _db = db;
+            _tokenGenerator = tokenGenerator;
         }
 
         //[Route("Users/All")]
@@ -189,7 +193,10 @@ namespace WebAPICoreTask2.Controllers
             {
                 return Unauthorized("Invalid email or password."); // 401 Unauthorized 
             }
-            return Ok("User logged in successfully");
+            var roles = _db.UserRoles.Where(x => x.UserId == user.UserId).Select(ur => ur.Role).ToList();
+            var token = _tokenGenerator.GenerateToken(user.Username, roles);
+
+            return Ok(new { Token = token, UserId1= user.UserId }); // now product controller and make authorization,, it will generate token that will be used in front end
         }
 
 

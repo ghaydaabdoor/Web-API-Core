@@ -274,3 +274,4 @@ C:\Users\Orange\Desktop\web API\Web-API-Core\WebAPICoreTask3\WebAPICoreTask2\obj
 C:\Users\Orange\Desktop\web API\Web-API-Core\WebAPICoreTask3\WebAPICoreTask2\obj\Debug\net8.0\WebAPICoreTask2.pdb
 C:\Users\Orange\Desktop\web API\Web-API-Core\WebAPICoreTask3\WebAPICoreTask2\obj\Debug\net8.0\WebAPICoreTask2.genruntimeconfig.cache
 C:\Users\Orange\Desktop\web API\Web-API-Core\WebAPICoreTask3\WebAPICoreTask2\obj\Debug\net8.0\ref\WebAPICoreTask2.dll
+C:\Users\Orange\Desktop\web API\Web-API-Core\WebAPICoreTask3\WebAPICoreTask2\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
